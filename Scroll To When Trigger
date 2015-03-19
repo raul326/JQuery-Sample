@@ -1,0 +1,12 @@
+//Sample View Here: http://www.volkertransport.com.au/services/
+
+//Scroll to when a is trigger
+jQuery( ".sidebar-service-list ul li a" ).click(function( event ) {
+  var anchor = jQuery(this).attr('href');
+  scrollToAnchor(anchor);
+  event.preventDefault();
+ });
+function scrollToAnchor(id) {
+  var o_link = jQuery("div"+id);
+  jQuery('html,body').animate({scrollTop: o_link.offset().top}, 'slow');
+}
